@@ -45,8 +45,8 @@ const StudentList = () => {
   return (
     <div className="studentList">
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      {filteredStudents.map((student) => {
-        return <StudentCard student={student} />;
+      {filteredStudents.map((student, index) => {
+        return <StudentCard student={student} key={index} />;
       })}
 
       {filteredStudents.length == 0 && (
